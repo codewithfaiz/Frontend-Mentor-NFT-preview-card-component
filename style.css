@@ -1,0 +1,160 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit&display=swap');
+
+:root {
+    --Very_dark_blue_bg_main: hsl(217, 54%, 11%);
+    --Very_dark_blue_bg_card: hsl(216, 50%, 16%);
+    --Very_dark_blue: hsl(215, 32%, 27%);
+    --Soft_blue: hsl(215, 51%, 70%);
+    --Cyan: hsl(178, 100%, 50%);
+    --White: hsl(0, 0%, 100%);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    padding: 3rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    font-family: 'Outfit', sans-serif;
+    background: var(--Very_dark_blue_bg_main);
+}
+
+ /*===============================================
+ styling NFT CARD container
+ =================================================*/
+
+.card {
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-radius: 1rem;
+    background: var(--Very_dark_blue_bg_card);
+    height: 33rem;
+    width: 20rem;
+}
+
+ /*===============================================
+ styling NFT image
+ =================================================*/
+
+.card_image img {
+    border-radius: 1rem;
+    width: 100%;
+    max-width: 19rem;
+    height: auto;
+}
+
+ /*===============================================
+ styling eye icon 
+ =================================================*/
+
+.card_image div {
+    height: 18rem;
+    width: 18rem;
+    opacity: 0;
+    border-radius: 1rem;
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.card_image div img {
+    height: 3rem;
+    width: 3rem;
+}
+.card_image div:hover {
+    background-color: hsla(178, 100%, 50%,0.3); 
+    opacity: 1;
+    transition: 0.5s;
+}
+
+/*===============================================
+ styling NFT card details
+ =================================================*/
+
+.card_detail h1 {
+    padding: 1rem 0rem;
+    color: var(--White);
+    font-size: 1.5rem;
+    font-weight: 600;
+    width: 13rem;
+}
+.card_detail h1:hover {
+    cursor: pointer;
+    color: var(--Cyan);
+    transition: 0.3s;
+}
+
+.card_detail p {
+    color: var(--Soft_blue);
+    text-align: left;
+    padding-bottom: 1rem;
+}
+
+/*===============================================
+ styling NFT card pricing and time left 
+ =================================================*/
+
+.card_price_time {
+    display: flex;
+    gap: 6rem;
+    color: var(--Soft_blue);
+}
+.card_prices{
+    font-weight: 900;
+    color: var(--Cyan);
+}
+.card_prices,
+.card_time {
+    display: flex;
+    align-items: center;
+    gap: 0.3rem;
+    font-weight: 300;
+}
+
+/*===============================================
+ styling hr tag for line
+ =================================================*/
+hr {
+    margin-top: 1rem;
+    margin-bottom: 0.7rem;
+    width: 17.5rem;
+
+}
+
+/*===============================================
+ styling creator container
+ =================================================*/
+
+.creator {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    margin-right: 3.5rem;
+}
+
+.creator img {
+    border: 0.1rem solid var(--White);
+    border-radius: 50%;
+    max-width: 2rem;
+}
+
+.creator p {
+    color: var(--Soft_blue);
+}
+.creator p a {
+    text-decoration: none;
+    color: var(--White);
+}
+.creator p a:hover {
+    color: var(--Cyan);
+}
